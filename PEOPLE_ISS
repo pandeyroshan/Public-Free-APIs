@@ -1,0 +1,33 @@
+URL : 
+http://api.open-notify.org/astros.json
+
+
+Response Type:
+
+{
+  "message": "success",
+  "number": NUMBER_OF_PEOPLE_IN_SPACE,
+  "people": [
+    {"name": NAME, "craft": SPACECRAFT_NAME},
+    ...
+  ]
+}
+
+
+
+Alternative URL: 
+
+
+
+http://api.open-notify.org/astros.json?callback=CALLBACK
+
+Response Type:
+ 
+CALLBACK({
+  "message": "success",
+  "number": %NUMBER_OF_PEOPLE_IN_SPACE%,
+  "people": [
+    {"name": %NAME%, "craft": %SPACECRAFT_NAME%},
+    ...
+  ]
+})
