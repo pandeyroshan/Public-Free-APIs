@@ -1,0 +1,47 @@
+
+URL1 : 
+http://api.open-notify.org/iss-pass.json?lat=LAT&lon=LON
+
+
+Pass LAT and LON and Get stats,how many times ISS will be just above  you
+
+Response Format : 
+
+
+
+{
+  "message": "success",
+  "request": {
+    "latitude": LATITUE,
+    "longitude": LONGITUDE, 
+    "altitude": ALTITUDE,
+    "passes": NUMBER_OF_PASSES,
+    "datetime": REQUEST_TIMESTAMP
+  },
+  "response": [
+    {"risetime": TIMESTAMP, "duration": DURATION},
+    ...
+  ]
+}
+
+
+
+URL2 : 
+http://api.open-notify.org/iss-pass.json?lat=LAT&lon=LON&callback=CALLBACK
+
+Response Format :
+
+CALLBACK({
+  "message": "success",
+  "request": {
+    "latitude": LATITUE,
+    "longitude": LONGITUDE, 
+    "altitude": ALTITUDE,
+    "passes": NUMBER_OF_PASSES,
+    "datetime": REQUEST_TIMESTAMP
+  },
+  "response": [
+    {"risetime": TIMESTAMP, "duration": DURATION},
+    ...
+  ]
+})
